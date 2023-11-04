@@ -13,3 +13,11 @@ create table LOAN_REVIEW(
                             loan_intrt double default 0.0 not null
 );
 
+create table PRODUCT_INFO(
+                             id bigint not null auto_increment primary key ,
+                             org_cd varchar(5) not null ,
+                             prod_cd varchar(3) not null ,
+                             prod_nm varchar(100) not null ,
+                             prod_min_intr double default 0 not null ,
+                             prod_max_intr double default 0 not null
+);
