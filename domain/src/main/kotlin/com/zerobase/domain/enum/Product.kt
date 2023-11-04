@@ -1,7 +1,5 @@
 package com.zerobase.domain.enum
 
-import java.lang.RuntimeException
-
 enum class Product (
     val productCode: String
 ){

@@ -1,6 +1,5 @@
 package com.zerobase.api.product
 
-import com.zerobase.api.http.HttpResponse
 import com.zerobase.domain.domain.ProductInfo
 import com.zerobase.domain.enum.findOrganizationCode
 import com.zerobase.domain.enum.findProductCode

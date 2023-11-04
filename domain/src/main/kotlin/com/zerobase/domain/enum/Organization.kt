@@ -1,7 +1,5 @@
 package com.zerobase.domain.enum
 
-import java.lang.RuntimeException
-
 enum class Organization(
     val organizationCode: String
 ) {
