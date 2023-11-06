@@ -4,11 +4,12 @@
 - Language : `kotlin`
 - Build : `gradle`
 - DataBase : `MySQL`
-- Containerization : `docker`
 - JDK : `JDK 11`
-- Caching : `Redis`
 - Framework : `SpringBoot Multi Module`
-- library : `Spring Data JPA`, `Lombok`, `Swagger`, `Apache Kafka` , `Nginx`
+- Caching : `Redis`
+- Proxy Server : `Nginx`
+- Containerization : `docker`
+- library : `Spring Data JPA`, `Lombok`, `Swagger`, `Apache Kafka`
 
 ## 2️⃣ API 설명
 ### **- ✅ 상품 정보 API**
