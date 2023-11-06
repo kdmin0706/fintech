@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service
 class TestService(
     private val userInfoRepository: UserInfoRepository
 ) {
-    //유저 키 있으면 리턴
     fun testGetService(userKey: String) = userInfoRepository.findByUserKey(userKey).toDto()
 
     fun UserInfo.toDto() = TestDto.UserInfoDto(userKey, userRegistrationNumber, userName, userIncomeAmount)
