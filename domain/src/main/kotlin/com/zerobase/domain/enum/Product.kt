@@ -11,5 +11,5 @@ enum class Product (
 fun findProductCode(productCode: String): Product {
     return Product.values()
         .find { o -> o.productCode == productCode
-        } ?: throw RuntimeException("no such type");
+        } ?: throw RuntimeException("type not matching")
 }

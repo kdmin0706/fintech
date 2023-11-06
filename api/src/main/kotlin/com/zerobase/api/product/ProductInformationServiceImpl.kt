@@ -13,10 +13,10 @@ class ProductInformationServiceImpl(
 ): ProductInformationService  {
     override fun saveProduct(productInformationDto: ProductInformationDto.RequestDto)
         : HttpResponse.HttpResponseDto {
-        val productInfo = productInformationDto.toEntity();
-        this.productRepository.save(productInfo);
+        val productInfo = productInformationDto.toEntity()
+        this.productRepository.save(productInfo)
 
-        return HttpResponse(HttpResponseCode.SUCCESS).toResponseDto();
+        return HttpResponse(HttpResponseCode.SUCCESS).toResponseDto()
     }
 
     override fun findProduct(organization: Organization)

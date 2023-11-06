@@ -11,5 +11,5 @@ enum class Organization(
 fun findOrganizationCode(organizationCode: String): Organization {
     return Organization.values()
         .find { o -> o.organizationCode == organizationCode
-        } ?: throw RuntimeException("no such type");
+        } ?: throw RuntimeException("type not matching")
 }

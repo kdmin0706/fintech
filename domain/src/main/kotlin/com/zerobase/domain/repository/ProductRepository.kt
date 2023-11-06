@@ -6,4 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository
 
 interface ProductRepository: JpaRepository<ProductInfo, Long>{
     fun findByOrganizationCode(organizationCode: Organization): List<ProductInfo>
+
 }

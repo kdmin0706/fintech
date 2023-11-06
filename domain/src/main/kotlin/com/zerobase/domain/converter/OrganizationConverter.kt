@@ -9,5 +9,5 @@ class OrganizationConverter: AttributeConverter<Organization, String> {
         = organization?.organizationCode ?: throw RuntimeException("code not exist")
 
     override fun convertToEntityAttribute(name: String)
-        = findOrganizationCode(name);
+        = findOrganizationCode(name)
 }

@@ -4,7 +4,7 @@ import com.zerobase.domain.domain.ProductInfo
 import com.zerobase.domain.enum.findOrganizationCode
 import com.zerobase.domain.enum.findProductCode
 
-data class ProductInformationDto(
+class ProductInformationDto(
     val organizationCode : String,
     val productCode: String,
     val productName: String,
