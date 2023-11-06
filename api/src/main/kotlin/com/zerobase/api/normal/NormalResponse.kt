@@ -1,7 +1,6 @@
 package com.zerobase.api.normal
 
 import org.springframework.http.HttpStatus
-import org.springframework.web.bind.annotation.ResponseStatus
 
 class NormalResponse(
     private val normalResponseCode: NormalResponseCode
