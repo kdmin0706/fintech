@@ -1,10 +1,10 @@
 package com.zerobase.api.user
 
 import UserInformationDto
-import com.zerobase.api.normal.NormalResponse
-import com.zerobase.api.normal.NormalResponseCode
 import com.zerobase.api.loan.GenerateKey
 import com.zerobase.api.loan.encrypt.EncryptComponent
+import com.zerobase.api.normal.NormalResponse
+import com.zerobase.api.normal.NormalResponseCode
 import com.zerobase.domain.repository.UserInfoRepository
 import org.springframework.stereotype.Service
 
