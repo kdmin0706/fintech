@@ -25,9 +25,12 @@ class UserInformationDto {
             )
     }
 
+    data class UserKey(
+        val userKey: String
+    )
     //응답 DTO
     data class UserInfoResponseDto(
-        val userKey: String,
+        val userKey: UserKey,
         val responseCode: String,
         val responseMessage: String
     )

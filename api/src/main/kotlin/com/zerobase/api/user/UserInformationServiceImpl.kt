@@ -30,7 +30,7 @@ class UserInformationServiceImpl(
         val okResponse = NormalResponse(NormalResponseCode.SUCCESS).toResponseDto()
 
         return UserInformationDto.UserInfoResponseDto(
-            userInfoDto.userKey,
+            UserInformationDto.UserKey(userKey),
             okResponse.responseCode,
             okResponse.responseMessage
         )
