@@ -1,6 +1,6 @@
-package com.zerobase.api.common
+package com.zerobase.api.normal
 
-enum class CommonResponseCode(
+enum class NormalResponseCode(
     val code: String,
     val message: String
 ) {

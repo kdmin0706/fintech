@@ -1,6 +1,6 @@
 package com.zerobase.api.product
 
-import com.zerobase.api.common.CommonResponse
+import com.zerobase.api.normal.NormalResponse
 import com.zerobase.domain.enum.Organization
 import io.swagger.annotations.ApiOperation
 import org.springframework.http.ResponseEntity
@@ -16,15 +16,16 @@ class ProductInformationController(
     fun getProduct(
         @PathVariable organizationCode: Organization
     ): ResponseEntity<ProductInformationDto.ResponseDto> {
-        return ResponseEntity.ok(productInformationService.findProduct(organizationCode))
+        return ResponseEntity
+            .ok(productInformationService.findProduct(organizationCode))
     }
 
     @PostMapping("/information")
     @ApiOperation(value = "상품 정보 수신 API", notes = "금융사로부터 상품 정보를 받는 API")
-
     fun postProduct(
         @RequestBody productInformationDto: ProductInformationDto.RequestDto
-    ): ResponseEntity<CommonResponse.HttpResponseDto> {
-        return ResponseEntity.ok(productInformationService.saveProduct(productInformationDto))
+    ): ResponseEntity<NormalResponse.NormalResponseDto> {
+        return ResponseEntity
+            .ok(productInformationService.saveProduct(productInformationDto))
     }
 }

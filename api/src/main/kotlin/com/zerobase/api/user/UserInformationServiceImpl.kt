@@ -1,8 +1,8 @@
 package com.zerobase.api.user
 
 import UserInformationDto
-import com.zerobase.api.common.CommonResponse
-import com.zerobase.api.common.CommonResponseCode
+import com.zerobase.api.normal.NormalResponse
+import com.zerobase.api.normal.NormalResponseCode
 import com.zerobase.api.loan.GenerateKey
 import com.zerobase.api.loan.encrypt.EncryptComponent
 import com.zerobase.domain.repository.UserInfoRepository
@@ -27,7 +27,7 @@ class UserInformationServiceImpl(
 
         this.userInfoRepository.save(userInfoDto.toEntity())
 
-        val okResponse = CommonResponse(CommonResponseCode.SUCCESS).toResponseDto()
+        val okResponse = NormalResponse(NormalResponseCode.SUCCESS).toResponseDto()
 
         return UserInformationDto.UserInfoResponseDto(
             userInfoDto.userKey,
@@ -43,7 +43,7 @@ class UserInformationServiceImpl(
             this.encryptComponent.decryptString(userInfo.userRegistrationNumber)
 
         val responseDto =
-            CommonResponse(CommonResponseCode.SUCCESS).toResponseDto()
+            NormalResponse(NormalResponseCode.SUCCESS).toResponseDto()
 
         return UserPrivateInformationDto.ResponseDto(
             UserPrivateInformationDto.PrivateData(userKey, decryptString),
