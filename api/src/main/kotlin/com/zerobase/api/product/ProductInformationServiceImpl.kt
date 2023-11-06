@@ -1,7 +1,7 @@
 package com.zerobase.api.product
 
-import com.zerobase.api.http.HttpResponse
-import com.zerobase.api.http.HttpResponseCode
+import com.zerobase.api.common.CommonResponse
+import com.zerobase.api.common.CommonResponseCode
 import com.zerobase.domain.enum.Organization
 import com.zerobase.domain.repository.ProductRepository
 import org.springframework.stereotype.Service
@@ -12,11 +12,11 @@ class ProductInformationServiceImpl(
 
 ): ProductInformationService  {
     override fun saveProduct(productInformationDto: ProductInformationDto.RequestDto)
-        : HttpResponse.HttpResponseDto {
+        : CommonResponse.HttpResponseDto {
         val productInfo = productInformationDto.toEntity()
         this.productRepository.save(productInfo)
 
-        return HttpResponse(HttpResponseCode.SUCCESS).toResponseDto()
+        return CommonResponse(CommonResponseCode.SUCCESS).toResponseDto()
     }
 
     override fun findProduct(organization: Organization)
@@ -38,7 +38,7 @@ class ProductInformationServiceImpl(
                 )
             }
 
-        val okResponse = HttpResponse(HttpResponseCode.SUCCESS).toResponseDto()
+        val okResponse = CommonResponse(CommonResponseCode.SUCCESS).toResponseDto()
 
         return ProductInformationDto.ResponseDto(
             data = data,

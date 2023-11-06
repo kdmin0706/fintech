@@ -1,8 +1,8 @@
-package com.zerobase.api.http
+package com.zerobase.api.common
 
 import org.springframework.http.HttpStatus
 
-enum class HttpResponseCode(
+enum class CommonResponseCode(
     val httpStatus: HttpStatus,
     val code: String,
     val message: String

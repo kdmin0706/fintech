@@ -14,7 +14,7 @@ import org.springframework.kafka.core.*
 @EnableKafka
 class KafkaConfig {
     companion object {
-        const val BOOTSTRAP_SERVER = "localhost:9092"
+        const val BOOTSTRAP_SERVER = "kafka:9092"
     }
 
     @Bean

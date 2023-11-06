@@ -1,6 +1,6 @@
 package com.zerobase.api.product
 
-import com.zerobase.api.http.HttpResponse
+import com.zerobase.api.common.CommonResponse
 import com.zerobase.domain.enum.Organization
 import io.swagger.annotations.ApiOperation
 import org.springframework.http.ResponseEntity
@@ -24,7 +24,7 @@ class ProductInformationController(
 
     fun postProduct(
         @RequestBody productInformationDto: ProductInformationDto.RequestDto
-    ): ResponseEntity<HttpResponse.HttpResponseDto> {
+    ): ResponseEntity<CommonResponse.HttpResponseDto> {
         return ResponseEntity.ok(productInformationService.saveProduct(productInformationDto))
     }
 }

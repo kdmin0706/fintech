@@ -1,11 +1,11 @@
 package com.zerobase.api.product
 
-import com.zerobase.api.http.HttpResponse
+import com.zerobase.api.common.CommonResponse
 import com.zerobase.domain.enum.Organization
 
 interface ProductInformationService {
     fun saveProduct(productInformationDto: ProductInformationDto.RequestDto)
-        : HttpResponse.HttpResponseDto
+        : CommonResponse.HttpResponseDto
 
     fun findProduct(organization: Organization)
         : ProductInformationDto.ResponseDto
