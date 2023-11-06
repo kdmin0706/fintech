@@ -38,7 +38,7 @@ class UserInformationServiceImpl(
 
     override fun getPrivateInfo(userKey: String)
         : UserPrivateInformationDto.ResponseDto {
-        val userInfo = this.userInfoRepository.findByUserKey(userKey);
+        val userInfo = this.userInfoRepository.findByUserKey(userKey)
         val decryptString =
             this.encryptComponent.decryptString(userInfo.userRegistrationNumber)
 
