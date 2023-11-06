@@ -1,4 +1,4 @@
-package com.zerobase.api.loan.encrypt
+package com.zerobase.domain.domain
 
 @Target(AnnotationTarget.FIELD)
 @Retention(AnnotationRetention.RUNTIME)

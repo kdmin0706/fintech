@@ -5,6 +5,8 @@ import javax.persistence.*
 @Entity
 @Table(name = "USR_INFO")
 class UserInfo(
+
+    @Encrypt
     @Column(name = "usr_key")
     val userKey: String,
 
